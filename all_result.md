@@ -10,7 +10,6 @@ AGGLOMERATIVE    4     2.4   良          N/A               N/A            N/A  
           GMM    7     5.3   中          N/A               N/A            N/A     N/A 2.80 ★★☆☆☆
        KMEANS   12    28.3   差          N/A               N/A            N/A     N/A 2.30 ★★☆☆☆
      SPECTRAL    7    23.3   差          N/A               N/A            N/A     N/A 2.30 ★★☆☆☆
-       DBSCAN    3  9949.6  極差          N/A               N/A            N/A     N/A 1.60 ★☆☆☆☆
       HDBSCAN   31   246.5  極差          N/A               N/A            N/A     N/A 1.20 ★☆☆☆☆
 
 💾 詳細比較表格已儲存: comprehensive_clustering_comparison.csv
@@ -33,21 +32,13 @@ AGGLOMERATIVE    4     2.4   良          N/A               N/A            N/A  
    GMM: 表現良好
    KMEANS: 聚類不平衡(28.3)
    SPECTRAL: 聚類不平衡(23.3)
-   DBSCAN: 聚類不平衡(9949.6)
    HDBSCAN: 聚類不平衡(246.5), 聚類數過多
-
-💡 改進建議:
-   🔧 DBSCAN修復建議:
-      1. 調整eps參數 (嘗試0.1-2.0)
-      2. 調整min_samples參數 (嘗試3-20)
-      3. 使用標準化或正規化的資料
 
 ✅ 建議使用順序:
    1. AGGLOMERATIVE - ★★★☆☆ (評分: 3.10)
    2. GMM - ★★☆☆☆ (評分: 2.80)
    3. KMEANS - ★★☆☆☆ (評分: 2.30)
    4. SPECTRAL - ★★☆☆☆ (評分: 2.30)
-   5. DBSCAN - ★☆☆☆☆ (評分: 1.60)
    6. HDBSCAN - ★☆☆☆☆ (評分: 1.20)
 
 ================================================================================

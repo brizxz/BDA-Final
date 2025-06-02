@@ -44,38 +44,6 @@ label
 11     590
 Name: count, dtype: int64
 
-正在執行 DBSCAN...
-
-=== DBSCAN 聚類分析 ===
-eps= 0.1, min_samples= 3: 聚類數=185, 噪聲點=2022, Silhouette=0.2959
-eps= 0.1, min_samples= 5: 聚類數=77, 噪聲點=2741, Silhouette=0.4363
-eps= 0.1, min_samples=10: 聚類數=30, 噪聲點=3867, Silhouette=0.5373
-eps= 0.1, min_samples=15: 聚類數=25, 噪聲點=4550, Silhouette=0.5078
-eps= 0.3, min_samples= 3: 聚類數=49, 噪聲點= 451, Silhouette=-0.4642
-eps= 0.3, min_samples= 5: 聚類數=21, 噪聲點= 626, Silhouette=-0.3382
-eps= 0.3, min_samples=10: 聚類數= 6, 噪聲點= 995, Silhouette=0.3292
-eps= 0.3, min_samples=15: 聚類數= 5, 噪聲點=1328, Silhouette=0.2714
-eps= 0.5, min_samples= 3: 聚類數=18, 噪聲點= 193, Silhouette=0.0347
-eps= 0.5, min_samples= 5: 聚類數= 8, 噪聲點= 271, Silhouette=0.5894
-eps= 0.5, min_samples=10: 聚類數= 2, 噪聲點= 439, Silhouette=0.6119
-eps= 0.5, min_samples=15: 聚類數= 2, 噪聲點= 607, Silhouette=0.6722
-eps= 0.7, min_samples= 3: 聚類數= 7, 噪聲點= 103, Silhouette=0.6559
-eps= 0.7, min_samples= 5: 聚類數= 7, 噪聲點= 126, Silhouette=0.4776
-eps= 0.7, min_samples=10: 聚類數= 2, 噪聲點= 237, Silhouette=0.6585
-eps= 1.0, min_samples= 3: 聚類數= 6, 噪聲點=  54, Silhouette=0.7057
-eps= 1.5, min_samples= 3: 聚類數= 2, 噪聲點=  18, Silhouette=0.7879
-最佳DBSCAN: eps=1.5, min_samples=3, Silhouette=0.7879
-
-創建提交檔案: dbscan_submission.csv
-提交檔案已保存: dbscan_submission.csv
-總計 49771 筆記錄
-聚類標籤分佈:
-label
-0       18
-1    49748
-2        5
-Name: count, dtype: int64
-
 正在執行 HDBSCAN...
 
 === HDBSCAN 聚類分析 ===
