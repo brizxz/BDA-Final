@@ -308,4 +308,4 @@ Silhouette Score: 0.5289
 - dbscan_submission: 0.3854
 - gmm_submission: 0.7291
 - hdbscan_submission: 0.7890
-- spectral_submission:
+- spectral_submission: 0.6830
