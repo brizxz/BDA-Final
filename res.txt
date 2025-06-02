@@ -300,3 +300,12 @@ Silhouette Score: 0.5289
 - public_submission.csv (最佳算法結果)
 - clustering_analysis_report.txt (詳細報告)
 - agglomerative_clustering_analysis.png (可視化結果)
+
+### public_submission
+
+- kmeans_submission: 0.9066
+- agglomerative_submission:
+- dbscan_submission:
+- gmm_submission:
+- hdbscan_submission:
+- spectral_submission:
