@@ -305,7 +305,7 @@ Silhouette Score: 0.5289
 
 - kmeans_submission: 0.9066
 - agglomerative_submission: 0.7156
-- dbscan_submission:
+- dbscan_submission: 0.3854
 - gmm_submission:
 - hdbscan_submission:
 - spectral_submission:
