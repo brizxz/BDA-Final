@@ -1,0 +1,302 @@
+(base) [b11902073@meow1 BDA-Final]$ python main.py 
+======================================================================
+大數據分析期末專案 - 進階聚類分析
+======================================================================
+成功載入公共數據: (49771, 5)
+開始數據預處理 (縮放方法: standard)...
+特徵維度: (49771, 4)
+特徵列: ['1', '2', '3', '4']
+
+開始應用各種聚類算法...
+
+正在執行 K-Means...
+
+=== K-Means 聚類分析 ===
+= 2: Silhouette=0.4559, 執行時間=0.13s
+K= 3: Silhouette=0.4859, 執行時間=0.16s
+K= 4: Silhouette=0.5482, 執行時間=0.24s
+K= 5: Silhouette=0.5650, 執行時間=0.25s
+K= 6: Silhouette=0.5796, 執行時間=0.34s
+K= 7: Silhouette=0.5862, 執行時間=0.47s
+K= 8: Silhouette=0.5910, 執行時間=0.39s
+K= 9: Silhouette=0.5638, 執行時間=0.46s
+K=10: Silhouette=0.5553, 執行時間=0.50s
+K=11: Silhouette=0.5880, 執行時間=0.70s
+K=12: Silhouette=0.5926, 執行時間=0.69s
+最佳K-Means: K=12, Silhouette=0.5926
+
+創建提交檔案: kmeans_submission.csv
+提交檔案已保存: kmeans_submission.csv
+總計 49771 筆記錄
+聚類標籤分佈:
+label
+0     7147
+1     7315
+2     2284
+3     7224
+4     7461
+5     1152
+6     7253
+7      938
+8      267
+9     7568
+10     572
+11     590
+Name: count, dtype: int64
+
+正在執行 DBSCAN...
+
+=== DBSCAN 聚類分析 ===
+eps= 0.1, min_samples= 3: 聚類數=185, 噪聲點=2022, Silhouette=0.2959
+eps= 0.1, min_samples= 5: 聚類數=77, 噪聲點=2741, Silhouette=0.4363
+eps= 0.1, min_samples=10: 聚類數=30, 噪聲點=3867, Silhouette=0.5373
+eps= 0.1, min_samples=15: 聚類數=25, 噪聲點=4550, Silhouette=0.5078
+eps= 0.3, min_samples= 3: 聚類數=49, 噪聲點= 451, Silhouette=-0.4642
+eps= 0.3, min_samples= 5: 聚類數=21, 噪聲點= 626, Silhouette=-0.3382
+eps= 0.3, min_samples=10: 聚類數= 6, 噪聲點= 995, Silhouette=0.3292
+eps= 0.3, min_samples=15: 聚類數= 5, 噪聲點=1328, Silhouette=0.2714
+eps= 0.5, min_samples= 3: 聚類數=18, 噪聲點= 193, Silhouette=0.0347
+eps= 0.5, min_samples= 5: 聚類數= 8, 噪聲點= 271, Silhouette=0.5894
+eps= 0.5, min_samples=10: 聚類數= 2, 噪聲點= 439, Silhouette=0.6119
+eps= 0.5, min_samples=15: 聚類數= 2, 噪聲點= 607, Silhouette=0.6722
+eps= 0.7, min_samples= 3: 聚類數= 7, 噪聲點= 103, Silhouette=0.6559
+eps= 0.7, min_samples= 5: 聚類數= 7, 噪聲點= 126, Silhouette=0.4776
+eps= 0.7, min_samples=10: 聚類數= 2, 噪聲點= 237, Silhouette=0.6585
+eps= 1.0, min_samples= 3: 聚類數= 6, 噪聲點=  54, Silhouette=0.7057
+eps= 1.5, min_samples= 3: 聚類數= 2, 噪聲點=  18, Silhouette=0.7879
+最佳DBSCAN: eps=1.5, min_samples=3, Silhouette=0.7879
+
+創建提交檔案: dbscan_submission.csv
+提交檔案已保存: dbscan_submission.csv
+總計 49771 筆記錄
+聚類標籤分佈:
+label
+0       18
+1    49748
+2        5
+Name: count, dtype: int64
+
+正在執行 HDBSCAN...
+
+=== HDBSCAN 聚類分析 ===
+min_cluster_size= 5, min_samples= 3: 聚類數=1376, 噪聲點=21203, Silhouette=0.3080
+min_cluster_size= 5, min_samples= 5: 聚類數=188, 噪聲點=5137, Silhouette=0.4430
+min_cluster_size= 5, min_samples=10: 聚類數=124, 噪聲點=9661, Silhouette=0.4430
+min_cluster_size=10, min_samples= 3: 聚類數=181, 噪聲點=7664, Silhouette=0.4047
+min_cluster_size=10, min_samples= 5: 聚類數=102, 噪聲點=6917, Silhouette=0.4783
+min_cluster_size=10, min_samples=10: 聚類數=58, 噪聲點=6583, Silhouette=0.4682
+min_cluster_size=15, min_samples= 3: 聚類數=95, 噪聲點=6159, Silhouette=0.4901
+min_cluster_size=15, min_samples= 5: 聚類數=53, 噪聲點=4903, Silhouette=0.5422
+min_cluster_size=15, min_samples=10: 聚類數=35, 噪聲點=6240, Silhouette=0.5285
+min_cluster_size=20, min_samples= 3: 聚類數=57, 噪聲點=5271, Silhouette=0.5073
+min_cluster_size=20, min_samples= 5: 聚類數=38, 噪聲點=5271, Silhouette=0.5513
+min_cluster_size=20, min_samples=10: 聚類數=27, 噪聲點=6985, Silhouette=0.5148
+min_cluster_size=30, min_samples= 3: 聚類數=35, 噪聲點=5844, Silhouette=0.5341
+min_cluster_size=30, min_samples= 5: 聚類數=30, 噪聲點=7296, Silhouette=0.5536
+min_cluster_size=30, min_samples=10: 聚類數=18, 噪聲點=5087, Silhouette=0.5327
+最佳HDBSCAN: min_cluster_size=30, Silhouette=0.5536
+
+創建提交檔案: hdbscan_submission.csv
+提交檔案已保存: hdbscan_submission.csv
+總計 49771 筆記錄
+聚類標籤分佈:
+label
+0     7296
+1       42
+2      570
+3      508
+4      508
+5       30
+6      544
+7       34
+8       57
+9      582
+10    7395
+11      39
+12      48
+13    7198
+14      37
+15      31
+16      38
+17      33
+18    6981
+19     129
+20      40
+21      37
+22      33
+23      86
+24    5898
+25      39
+26    5861
+27      43
+28      48
+29      62
+30    5524
+Name: count, dtype: int64
+
+正在執行 譜聚類...
+
+=== 譜聚類分析 ===
+數據集過大 (49771 樣本)，使用前5000個樣本進行譜聚類
+注意：譜聚類結果基於樣本數據，可能不完全代表整體數據特性
+K= 2: Silhouette=0.4559, 執行時間=2.84s
+K= 3: Silhouette=0.4860, 執行時間=2.41s
+K= 4: Silhouette=0.5481, 執行時間=2.09s
+K= 5: Silhouette=0.5650, 執行時間=1.62s
+K= 6: Silhouette=0.5795, 執行時間=0.99s
+K= 7: Silhouette=0.5857, 執行時間=1.26s
+K= 8: Silhouette=0.5479, 執行時間=1.42s
+最佳譜聚類: K=7, Silhouette=0.5857
+
+創建提交檔案: spectral_submission.csv
+提交檔案已保存: spectral_submission.csv
+總計 49771 筆記錄
+聚類標籤分佈:
+label
+0     1114
+1    15818
+2     7806
+3    15871
+4      681
+5     1057
+6     7424
+Name: count, dtype: int64
+
+正在執行 GMM...
+
+=== 高斯混合模型聚類分析 ===
+K= 2: Silhouette=0.4547, AIC=121583.5, BIC=121839.2, 執行時間=0.13s
+K= 3: Silhouette=0.3476, AIC=-19071.0, BIC=-18683.2, 執行時間=0.37s
+K= 4: Silhouette=0.3160, AIC=-165025.5, BIC=-164505.4, 執行時間=0.52s
+K= 5: Silhouette=0.3913, AIC=-184356.0, BIC=-183703.7, 執行時間=0.95s
+K= 6: Silhouette=0.3882, AIC=-283438.6, BIC=-282654.1, 執行時間=1.02s
+K= 7: Silhouette=0.4833, AIC=-268792.0, BIC=-267875.2, 執行時間=0.80s
+K= 8: Silhouette=0.4111, AIC=-338203.9, BIC=-337154.9, 執行時間=0.95s
+K= 9: Silhouette=0.4757, AIC=-369385.6, BIC=-368204.3, 執行時間=0.97s
+K=10: Silhouette=0.4467, AIC=-398807.3, BIC=-397493.9, 執行時間=1.73s
+K=11: Silhouette=0.4673, AIC=-395147.9, BIC=-393702.2, 執行時間=1.58s
+K=12: Silhouette=0.4464, AIC=-404187.5, BIC=-402609.6, 執行時間=2.34s
+最佳GMM: K=7, Silhouette=0.4833
+
+創建提交檔案: gmm_submission.csv
+提交檔案已保存: gmm_submission.csv
+總計 49771 筆記錄
+聚類標籤分佈:
+label
+0     3376
+1     7531
+2     7371
+3     7581
+4     7511
+5     2611
+6    13790
+Name: count, dtype: int64
+
+正在執行 層次聚類...
+
+=== 層次聚類分析 ===
+數據集較大，使用 10000 個樣本進行參數調優
+
+WARD 連接方法:
+  K= 2: Silhouette=0.4355, 平衡比例=1.1, 調整分數=0.4355, 執行時間=274.18s
+  K= 3: Silhouette=0.4746, 平衡比例=3.4, 調整分數=0.4746, 執行時間=220.67s
+  K= 4: Silhouette=0.5289, 平衡比例=2.4, 調整分數=0.5289, 執行時間=236.52s
+  K= 5: Silhouette=0.5438, 平衡比例=15.1, 調整分數=0.3599, 執行時間=225.41s
+  K= 6: Silhouette=0.5521, 平衡比例=28.1, 調整分數=0.1962, 執行時間=218.85s
+  K= 7: Silhouette=0.5520, 平衡比例=28.1, 調整分數=0.1962, 執行時間=176.60s
+  K= 8: Silhouette=0.5465, 平衡比例=24.9, 調整分數=0.2197, 執行時間=191.10s
+  K= 9: Silhouette=0.5558, 平衡比例=24.9, 調整分數=0.2234, 執行時間=191.49s
+  K=10: Silhouette=0.5650, 平衡比例=23.8, 調整分數=0.2376, 執行時間=209.89s
+  K=11: Silhouette=0.5769, 平衡比例=12.6, 調整分數=0.4584, 執行時間=211.15s
+  K=12: Silhouette=0.5826, 平衡比例=12.3, 調整分數=0.4739, 執行時間=226.57s
+
+COMPLETE 連接方法:
+  K= 2: 結果不平衡（比例 920.7），降低評分
+  K= 3: 結果不平衡（比例 910.5），降低評分
+  K= 4: 結果不平衡（比例 892.7），降低評分
+  K= 5: 結果不平衡（比例 1204.1），降低評分
+  K= 6: 結果不平衡（比例 16054.7），降低評分
+  K= 7: 樣本結果不平衡（比例 3237.3），跳過
+  K= 8: 樣本結果不平衡（比例 3237.3），跳過
+  K= 9: 樣本結果不平衡（比例 2765.0），跳過
+  K=10: 樣本結果不平衡（比例 2433.0），跳過
+  K=11: 樣本結果不平衡（比例 2433.0），跳過
+  K=12: 樣本結果不平衡（比例 2433.0），跳過
+
+AVERAGE 連接方法:
+  K= 2: 結果不平衡（比例 16589.3），降低評分
+  K= 3: 結果不平衡（比例 16583.3），降低評分
+  K= 4: 樣本結果不平衡（比例 2487.0），跳過
+  K= 5: 樣本結果不平衡（比例 2474.5），跳過
+  K= 6: 樣本結果不平衡（比例 3299.3），跳過
+  K= 7: 樣本結果不平衡（比例 3276.3），跳過
+  K= 8: 樣本結果不平衡（比例 9829.0），跳過
+  K= 9: 樣本結果不平衡（比例 9829.0），跳過
+  K=10: 樣本結果不平衡（比例 9829.0），跳過
+  K=11: 樣本結果不平衡（比例 9829.0），跳過
+  K=12: 樣本結果不平衡（比例 9829.0），跳過
+
+SINGLE 連接方法:
+  K= 2: 樣本結果不平衡（比例 9999.0），跳過
+  K= 3: 樣本結果不平衡（比例 9995.0），跳過
+  K= 4: 樣本結果不平衡（比例 9995.0），跳過
+  K= 5: 樣本結果不平衡（比例 9994.0），跳過
+  K= 6: 樣本結果不平衡（比例 9993.0），跳過
+  K= 7: 樣本結果不平衡（比例 9992.0），跳過
+  K= 8: 樣本結果不平衡（比例 9991.0），跳過
+  K= 9: 樣本結果不平衡（比例 9989.0），跳過
+  K=10: 樣本結果不平衡（比例 9988.0），跳過
+  K=11: 樣本結果不平衡（比例 9985.0），跳過
+  K=12: 樣本結果不平衡（比例 9977.0），跳過
+最佳層次聚類: K=4, linkage=ward, Silhouette=0.5289, 調整分數=0.5289
+
+創建提交檔案: agglomerative_submission.csv
+提交檔案已保存: agglomerative_submission.csv
+總計 49771 筆記錄
+聚類標籤分佈:
+label
+0    18269
+1    15761
+2     7747
+3     7994
+Name: count, dtype: int64
+
+======================================================================
+聚類算法性能比較
+======================================================================
+           算法  聚類數  噪聲點 Silhouette Score Calinski-Harabasz Davies-Bouldin 執行時間(秒)
+AGGLOMERATIVE    4    0           0.5289           33898.1         0.7083  236.52
+
+推薦算法: AGGLOMERATIVE
+最佳Silhouette Score: 0.5289
+
+創建提交檔案: public_submission.csv
+提交檔案已保存: public_submission.csv
+總計 49771 筆記錄
+聚類標籤分佈:
+label
+0    18269
+1    15761
+2     7747
+3     7994
+Name: count, dtype: int64
+
+生成 agglomerative 聚類結果可視化...
+可視化結果已保存: agglomerative_clustering_analysis.png
+詳細報告已保存: clustering_analysis_report.txt
+
+======================================================================
+分析完成！
+======================================================================
+推薦聚類算法: AGGLOMERATIVE
+聚類數量: 4
+Silhouette Score: 0.5289
+執行時間: 236.52 秒
+
+生成的檔案:
+各算法預測結果:
+- agglomerative_submission.csv
+整合結果:
+- public_submission.csv (最佳算法結果)
+- clustering_analysis_report.txt (詳細報告)
+- agglomerative_clustering_analysis.png (可視化結果)
