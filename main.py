@@ -750,7 +750,7 @@ def main():
     
     try:
         print("\n正在執行 K-Means...")
-        analysis.apply_kmeans_variants(max_k=12)
+        analysis.apply_kmeans_variants(max_k=20)
         if 'kmeans' in analysis.results:
             analysis.create_submission_file(
                 analysis.results['kmeans']['labels'], 
@@ -759,60 +759,60 @@ def main():
     except Exception as e:
         print(f"K-Means 分析失敗: {e}")
     
-    try:
-        print("\n正在執行 DBSCAN...")
-        analysis.apply_dbscan_variants()
-        if 'dbscan' in analysis.results:
-            analysis.create_submission_file(
-                analysis.results['dbscan']['labels'], 
-                filename="dbscan_submission.csv"
-            )
-    except Exception as e:
-        print(f"DBSCAN 分析失敗: {e}")
+    # try:
+    #     print("\n正在執行 DBSCAN...")
+    #     analysis.apply_dbscan_variants()
+    #     if 'dbscan' in analysis.results:
+    #         analysis.create_submission_file(
+    #             analysis.results['dbscan']['labels'], 
+    #             filename="dbscan_submission.csv"
+    #         )
+    # except Exception as e:
+    #     print(f"DBSCAN 分析失敗: {e}")
     
-    try:
-        print("\n正在執行 HDBSCAN...")
-        analysis.apply_hdbscan()
-        if 'hdbscan' in analysis.results:
-            analysis.create_submission_file(
-                analysis.results['hdbscan']['labels'], 
-                filename="hdbscan_submission.csv"
-            )
-    except Exception as e:
-        print(f"HDBSCAN 分析失敗: {e}")
+    # try:
+    #     print("\n正在執行 HDBSCAN...")
+    #     analysis.apply_hdbscan()
+    #     if 'hdbscan' in analysis.results:
+    #         analysis.create_submission_file(
+    #             analysis.results['hdbscan']['labels'], 
+    #             filename="hdbscan_submission.csv"
+    #         )
+    # except Exception as e:
+    #     print(f"HDBSCAN 分析失敗: {e}")
     
-    try:
-        print("\n正在執行 譜聚類...")
-        analysis.apply_spectral_clustering(max_k=8)
-        if 'spectral' in analysis.results:
-            analysis.create_submission_file(
-                analysis.results['spectral']['labels'], 
-                filename="spectral_submission.csv"
-            )
-    except Exception as e:
-        print(f"譜聚類分析失敗: {e}")
+    # try:
+    #     print("\n正在執行 譜聚類...")
+    #     analysis.apply_spectral_clustering(max_k=8)
+    #     if 'spectral' in analysis.results:
+    #         analysis.create_submission_file(
+    #             analysis.results['spectral']['labels'], 
+    #             filename="spectral_submission.csv"
+    #         )
+    # except Exception as e:
+    #     print(f"譜聚類分析失敗: {e}")
     
-    try:
-        print("\n正在執行 GMM...")
-        analysis.apply_gaussian_mixture(max_k=12)
-        if 'gmm' in analysis.results:
-            analysis.create_submission_file(
-                analysis.results['gmm']['labels'], 
-                filename="gmm_submission.csv"
-            )
-    except Exception as e:
-        print(f"GMM 分析失敗: {e}")
+    # try:
+    #     print("\n正在執行 GMM...")
+    #     analysis.apply_gaussian_mixture(max_k=12)
+    #     if 'gmm' in analysis.results:
+    #         analysis.create_submission_file(
+    #             analysis.results['gmm']['labels'], 
+    #             filename="gmm_submission.csv"
+    #         )
+    # except Exception as e:
+    #     print(f"GMM 分析失敗: {e}")
     
-    try:
-        print("\n正在執行 層次聚類...")
-        analysis.apply_agglomerative_clustering(max_k=12)
-        if 'agglomerative' in analysis.results:
-            analysis.create_submission_file(
-                analysis.results['agglomerative']['labels'], 
-                filename="agglomerative_submission.csv"
-            )
-    except Exception as e:
-        print(f"層次聚類分析失敗: {e}")
+    # try:
+    #     print("\n正在執行 層次聚類...")
+    #     analysis.apply_agglomerative_clustering(max_k=12)
+    #     if 'agglomerative' in analysis.results:
+    #         analysis.create_submission_file(
+    #             analysis.results['agglomerative']['labels'], 
+    #             filename="agglomerative_submission.csv"
+    #         )
+    # except Exception as e:
+    #     print(f"層次聚類分析失敗: {e}")
     
     # 5. 比較所有算法結果
     if analysis.results:
@@ -822,7 +822,7 @@ def main():
         if best_method is not None:
             submission = analysis.create_submission_file(
                 best_result['labels'], 
-                filename="public_submission.csv"
+                filename="public1_submission.csv"
             )
             
             # 7. 可視化結果
