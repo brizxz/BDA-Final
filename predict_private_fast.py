@@ -471,7 +471,7 @@ class FastPrivatePredictor:
     
     def _test_fast_kmeans(self, features):
         """測試快速K-Means"""
-        k_values = [2, 3, 4, 5, 6]
+        k_values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
         best_k = 2
         best_score = -1
         best_model = None
