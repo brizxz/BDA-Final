@@ -17,14 +17,14 @@ KMEANS:
   - Silhouette Score: 0.6048
   - Calinski-Harabasz Score: 39300.31
   - Davies-Bouldin Score: 0.7576
-  - 執行時間: 0.77 秒
+  - 執行時間: 0.78 秒
 
 3. 推薦結果
 --------------------
 推薦算法: KMEANS
 聚類數: 17
 Silhouette Score: 0.6048
-執行時間: 0.77 秒
+執行時間: 0.78 秒
 
 4. 聚類分佈
 --------------------
